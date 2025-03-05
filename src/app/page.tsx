@@ -58,7 +58,9 @@ export default function MotivationPage() {
           </button>
         </motion.div>
       </motion.div>
-      <p>made by blazeboy🔥</p>
+      <div className="absolute bottom-3.5">
+        <p>made by blazeboy🔥</p>
+      </div>
     </div>
   );
 }
