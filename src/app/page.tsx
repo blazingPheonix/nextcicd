@@ -6,22 +6,23 @@ import { motion } from "framer-motion";
 export default function MotivationPage() {
   const [quote, setQuote] = useState("");
 
-  const quotes = [
-    "Code your dreams into reality.",
-    "Every line of code is a step closer to greatness.",
-    "Debugging is like being the detective in a crime movie where you are also the murderer.",
-    "Great coders are not born, they are self-made.",
-    "Your only limit is the one you set yourself."
-  ];
+  
 
   useEffect(() => {
+    const quotes = [
+      "Code your dreams into reality.",
+      "Every line of code is a step closer to greatness.",
+      "Debugging is like being the detective in a crime movie where you are also the murderer.",
+      "Great coders are not born, they are self-made.",
+      "Your only limit is the one you set yourself."
+    ];
     const interval = setInterval(() => {
       const randomIndex = Math.floor(Math.random() * quotes.length);
       setQuote(quotes[randomIndex]);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [quotes]);
+  }, []);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-gray-900 to-black text-white p-8">
@@ -43,7 +44,7 @@ export default function MotivationPage() {
           transition={{ duration: 0.8 }}
           className="text-2xl italic"
         >
-          "{quote}"
+          {quote}
         </motion.p>
 
         <motion.div
