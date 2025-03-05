@@ -4,7 +4,7 @@ name: Deployment Workflow
 on:
   push:
     branches:
-      - Main
+      - main
 
 jobs:
   deploy:
@@ -26,7 +26,7 @@ jobs:
         with:
           host: 54.173.43.130 # Your server's IP address
           username: ubuntu # Your server's username
-          port: 3002
+          port: 22
           key: ${{ secrets.PRIVATE_SSH_KEY }} # Your server's SSH private key
           script: |
             ls 
