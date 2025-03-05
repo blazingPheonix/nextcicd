@@ -27,13 +27,13 @@ jobs:
           host: 54.173.43.130 # Your server's IP address
           username: ubuntu # Your server's username
           port: 22
-          key: ${{ secrets.PRIVATE_SSH_KEY }} # Your server's SSH private key
+          key: ${{ secrets.PRIVATE_SSH_KEY}} # Your server's SSH private key
           script: |
             ls 
             whoami
             echo "success boizzz"
-            cd /home/ubuntu/nextjsproject # Specify the path to your app directory on the server
+            cd /home/ubuntu/nextjsproject/nextcicd # Specify the path to your app directory on the server
             git pull
             npm install
             npm run build
-            pm2 restart your-pm2-service-name # Replace with your PM2 service name
+            pm2 restart nextjs-app # Replace with your PM2 service name
