@@ -54,7 +54,7 @@ export default function MotivationPage() {
           className="mt-16"
         >
           <button className="px-8 py-4 text-lg font-semibold rounded-2xl bg-purple-600 hover:bg-pink-500 transition-all">
-            Stay Motivated
+            Stay Motivated!
           </button>
         </motion.div>
       </motion.div>
