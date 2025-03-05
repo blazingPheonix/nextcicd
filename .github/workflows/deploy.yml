@@ -25,10 +25,13 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: 54.173.43.130 # Your server's IP address
-          username: ${{ secrets.USERNAME }} # Your server's username
+          username: ubuntu # Your server's username
           port: 3002
           key: ${{ secrets.PRIVATE_SSH_KEY }} # Your server's SSH private key
           script: |
+            ls 
+            whoami
+            echo "success boizzz"
             cd /home/ubuntu/nextjsproject # Specify the path to your app directory on the server
             git pull
             npm install
