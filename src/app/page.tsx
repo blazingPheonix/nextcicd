@@ -58,6 +58,7 @@ export default function MotivationPage() {
           </button>
         </motion.div>
       </motion.div>
+      <p>made by blazeboy🔥</p>
     </div>
   );
 }
