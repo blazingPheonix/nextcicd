@@ -21,7 +21,7 @@ export default function MotivationPage() {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [quotes]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-gray-900 to-black text-white p-8">
